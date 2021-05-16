@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Atividade 1 - JavaScript</title>
+  <!-- conexao com o css -->
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <main>
+    <form>
+      <!-- nome -->
+      <div>
+        <label for="">Nome</label>
+        <input name="nome" required="required" placeholder="Digite seu nome" type="text">
+    </div>
+    <!-- serie -->
+    <div>
+
+    </label for="">Selecione sua série</label>
+    <select required="required" name="série">
+        <option selected="selected" value="">Selecione</option>
+        <option value="1">Primeira</option>
+        <option value="2">Segunda</option>
+        <option value="3">Terceira</option>
+        </select>
+</div>
+
+    <!-- email -->
+    <div>
+      <form method="post" action="" onSubmit="return (verifica() )" name="frmEnvia">
+        <label for="email">E-mail: </label>
+        <input type="email" id="email"  placeholder="Ex.: user@mail.com" onblur="checarEmail();" />
+        <input  type="submit" value=" ENVIAR "/>
+        
+     </form>
+  </div>
+<!-- texto -->
+      <div>
+        <label for="texto">Texto</label>
+        <textarea name="original" id="texto" rows="10" maxlength="240" style="margin: 0px; height: 194px; width: 438px;"></textarea>
+        <!-- contagem de caracteres -->
+        <p>Caracteres restantes: <span id="cont">240</span></p>
+      </div>
+      <div class="efeitos-container" >
+        <label for="efeito">Efeito</label>
+        <select id="efeito">
+          <option value="uppercase">Maiúsculas</option>
+          <option value="lowercase">Minúsculas</option>
+        </select>
+        <div id="efeitos">
+          <section class="check" >
+            <input type="checkbox" name="bold" id="bold">
+          <!-- Negrito -->
+            <label for="bold">Negrito</label>
+          </section>
+          <section class="color" >
+            <input type="color" id="color">
+            <label for="color" id="color">Cor</label>
+          </section>
+        </div>
+      </div>
+      <div>
+        <label for="modificado">Modificado</label>
+        <textarea name="modificado" id="modificado" rows="5" disabled></textarea>
+        
+      </div>
+    </form>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
